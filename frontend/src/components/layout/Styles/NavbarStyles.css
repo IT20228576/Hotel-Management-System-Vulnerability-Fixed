@@ -1,0 +1,92 @@
+.navbar-styles {
+  background-color: black;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-items-left {
+  position: absolute;
+  left: 8%;
+}
+.navbar-items-right {
+  position: absolute;
+  right: 8%;
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
+  list-style: none;
+  font-size: 2rem;
+}
+
+.navbar-items a {
+  color: white;
+  text-decoration: none;
+}
+
+.menubar {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.nav-menu {
+  z-index: 1000;
+  background-color: black;
+  width: 110px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
+.nav-menu-items {
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+.nav-menu-items .row {
+  width: 100%;
+  height: 100px;
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.nav-menu-items .row:hover {
+  cursor: pointer;
+  color: blue;
+}
+
+.nav-menu-items .row a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu-items #active {
+  color: Black;
+  background-color: #d3d3d3;
+}
+.row #nav-icon {
+  flex: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.row #nav-title {
+  flex: 100%;
+  display: grid;
+  place-items: center;
+}

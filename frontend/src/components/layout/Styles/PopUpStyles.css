@@ -1,0 +1,4 @@
+.my-modal {
+    width: 90%;   /* Occupy the 90% of the screen width */
+    max-width: 1000px !important;
+} 

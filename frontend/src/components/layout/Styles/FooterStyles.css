@@ -1,0 +1,23 @@
+.main-footer {
+  color: black;
+  background-color: white;
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  border-top: 1px solid lightgrey;
+  position: absolute;
+  bottom: 0;
+}
+
+.border-line {
+  border-right: 1px solid #000;
+}
+
+.main-footer-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: auto;
+  text-align: center;
+}
