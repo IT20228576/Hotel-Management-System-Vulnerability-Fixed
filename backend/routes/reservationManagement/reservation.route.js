@@ -1,8 +1,6 @@
 const express = require("express");
 const Reservations = require("../../models/reservationManagement/reservation.model");
 const router = express.Router();
-// importing the sentEmail function implemented by IT20228576
-const { sentEmail } = require("../../utils/userManagement/email.util");
 
 /* Function Generate a New Reference Number */
 const ReferenceNumberGenerator = async () => {
@@ -158,18 +156,6 @@ router.post("/confirm", async (req, res) => {
 
     const newReservation = new Reservations(newResponse);
     const result = await newReservation.save();
-
-    // parameters for the sentEmail function
-    const emailAddress = result.email;
-    const emailSubject = "Reservation Confirmation - CISP Hotel";
-    const emailBody = `Dear ${
-      result.firstName + " " + result.lastName
-    },\nYour Reservation is Confirmed and the Reference Number is: ${
-      result.referenceNumber
-    }.\n\nThank you.\nCISP Hotel.`;
-
-    // sending the reservation confirmation email to the customer
-    await sentEmail(emailAddress, emailSubject, emailBody);
 
     return res.status(201).json({
       data: result,
